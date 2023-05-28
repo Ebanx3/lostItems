@@ -23,7 +23,7 @@ export default function Page() {
       headers: { "Content-Type": "application/json" },
     });
     const response = await res.json();
-    console.log(response);
+
     if (response.success) {
       setObject(response.data);
       setLoading(false);

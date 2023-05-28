@@ -6,7 +6,6 @@ export async function GET(req: Request) {
     try {
         await Connection.getInstance();
 
-        console.log(req.url)
         const stringParams = req.url?.split("?")[1];
         const type = stringParams?.split("&")[0].split("=")[1]
         let data: string = "";
@@ -29,7 +28,6 @@ export async function GET(req: Request) {
         return NextResponse.json({ success: true, data: ress }, { status: 200 })
     }
     catch (error) {
-        console.log(error)
         return NextResponse.json({ success: false })
 
     }

@@ -70,7 +70,7 @@ export default function Form() {
         category,
         img: selectedFile,
       });
-      console.log(data);
+
       if (data.success === true) {
         setLoading(false);
       }
