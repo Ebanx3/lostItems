@@ -1,10 +1,8 @@
 import { NextResponse } from "next/server";
-import cloudinary from "@/cludinary";
 import objectModel from "../objectModel";
 import Connection from "@/dbConnection";
-import { NextApiRequest } from "next";
 
-export async function GET(req: NextApiRequest) {
+export async function GET(req: Request) {
     try {
         await Connection.getInstance();
 
