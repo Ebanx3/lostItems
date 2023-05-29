@@ -3,6 +3,7 @@ import Object from "./Object";
 import { useRouter } from "next/navigation";
 import Image from "next/image";
 import Loader from "../../public/loader1.gif";
+export const dynamic = "auto";
 
 export default function ObjectsContainer({
   dataToSearch,
