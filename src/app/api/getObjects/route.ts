@@ -28,7 +28,7 @@ export async function GET(req: Request) {
         return NextResponse.json({ success: true, data: ress }, { status: 200 })
     }
     catch (error: any) {
-        return NextResponse.json({ success: false })
+        return NextResponse.json({ success: false, url: req.url })
 
     }
 }
