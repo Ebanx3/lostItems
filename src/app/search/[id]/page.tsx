@@ -48,14 +48,14 @@ export default function Page() {
     );
   }
   return (
-    <main className=" bg-azul-oscuro relative text-gris-claro">
+    <main className=" bg-azul-oscuro relative text-gris-claro p-8 min-h-screen flex items-center">
       <button
         className="absolute top-4 left-4 bg-gris-claro text-gris-oscuro p-2 rounded-md font-bold hover:bg-azul-claro z-50"
         onClick={() => router.back()}
       >
         Atras
       </button>
-      <div className="flex  min-h-screen max-w-3xl flex-col items-center justify-center m-auto text-gris-claro text-lg p-8">
+      <div className="flex  max-w-3xl flex-col items-center justify-center m-auto text-gris-claro text-lg border-2 border-stone-500 p-2 py-8">
         <Image
           src={object.imgUrl}
           width={600}
