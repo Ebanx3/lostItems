@@ -18,15 +18,18 @@ export default function Page() {
   const [loading, setLoading] = useState(true);
   const params = useParams();
   const router = useRouter();
+
   const fetchById = async () => {
     const res = await fetch(`/api/getObject/?${params.id}`, {
       headers: { "Content-Type": "application/json" },
     });
     const response = await res.json();
-
+    console.log(response);
     if (response.success) {
       setObject(response.data);
       setLoading(false);
+    } else {
+      router.back();
     }
   };
 
@@ -45,7 +48,7 @@ export default function Page() {
     );
   }
   return (
-    <main className=" bg-azul-oscuro relative">
+    <main className=" bg-azul-oscuro relative text-gris-claro">
       <button
         className="absolute top-4 left-4 bg-gris-claro text-gris-oscuro p-2 rounded-md font-bold hover:bg-azul-claro z-50"
         onClick={() => router.back()}
@@ -59,9 +62,9 @@ export default function Page() {
           height={600}
           alt={object.category}
         />
-        <span className="mt-4 font-bold self-start">Detalles</span>
+        <span className="mt-16 font-bold self-start">Detalles</span>
         <span className="mt-4">{object.description}</span>
-        <span className="mt-4 font-bold self-start">
+        <span className="mt-16 font-bold self-start">
           Información de contacto
         </span>
         {object.contactMethod === "email" && (

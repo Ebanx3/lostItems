@@ -27,10 +27,11 @@ export default function ObjectsContainer({
       headers: { "Content-Type": "application/json" },
     });
     const res = await response.json();
-    console.log(res);
     if (res.success) {
       setObjects(res.data);
       setLoading(false);
+    } else {
+      router.back();
     }
   };
 
