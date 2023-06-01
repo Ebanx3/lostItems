@@ -46,7 +46,7 @@ export default function ObjectsContainer({
   return (
     <>
       <button
-        className="absolute top-4 left-4 bg-gris-claro text-gris-oscuro p-2 rounded-md font-bold hover:bg-azul-claro z-50"
+        className=" fixed top-4 left-4 bg-gris-claro text-gris-oscuro p-2 rounded-md font-bold hover:bg-azul-claro z-50"
         onClick={() => router.back()}
       >
         Atras
