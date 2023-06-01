@@ -2,7 +2,6 @@ import { NextResponse } from "next/server";
 import objectModel from "../objectModel";
 import Connection from "@/dbConnection";
 import mongoose from "mongoose";
-import { errorToJSON } from "next/dist/server/render";
 
 export async function GET(req: Request) {
     try {
